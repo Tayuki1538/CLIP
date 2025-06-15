@@ -6,6 +6,165 @@ import torch
 import torch.nn.functional as F
 from torch import nn
 
+from clip.GSP_encoder import GE_1DCNN
+from clip.spatial_encoder import SE_MLP
+from clip.GSP_decoder import GD_MLP
+
+
+class GSP_Spatial_CLIP(nn.Module):
+    def __init__(self,
+                 embed_dim: int,           # 埋め込み次元 (例: 512)
+                 # Spatial Encoder (MLP)
+                 spatial_coord_dim: int,   # 元の空間座標の次元 (例: 2)
+                 spatial_sinusoidal_dim: int, # Sinusoidal Embeddingの次元 (例: 10)
+                 # SIR Encoder (1D CNN)
+                 GSP_input_length: int,    # 元のSIRの長さ (例: 4800)
+                 ):
+        super().__init__()
+
+        # Spatial Encoder (MLP)
+        self.spatial_encoder = SE_MLP(
+            original_coord_dim=spatial_coord_dim,
+            output_dim=embed_dim
+        )
+
+        # GSP Encoder (1D CNN)
+        self.GSP_encoder = GE_1DCNN(
+            input_length=GSP_input_length,
+            output_dim=embed_dim
+        )
+        
+        # logit_scale は学習可能な温度パラメータ (tauの逆数)
+        # CLIP論文では log(1/0.07) から初期化
+        self.logit_scale = nn.Parameter(torch.ones([]) * np.log(1 / 0.07))
+
+        self.initialize_parameters()
+
+    def initialize_parameters(self):
+        
+        nn.init.kaiming_normal_(self.spatial_encoder.fc1.weight, a=0, mode="fan_in", nonlinearity="leaky_relu")
+        nn.init.kaiming_normal_(self.spatial_encoder.fc2.weight, a=0, mode="fan_in", nonlinearity="leaky_relu")
+        nn.init.kaiming_normal_(self.GSP_encoder.conv1.weight, a=0, mode="fan_in", nonlinearity="leaky_relu")
+        nn.init.kaiming_normal_(self.GSP_encoder.conv2.weight, a=0, mode="fan_in", nonlinearity="leaky_relu")
+        nn.init.kaiming_normal_(self.GSP_encoder.conv3.weight, a=0, mode="fan_in", nonlinearity="leaky_relu")
+        nn.init.kaiming_normal_(self.GSP_encoder.conv4.weight, a=0, mode="fan_in", nonlinearity="leaky_relu")
+        nn.init.kaiming_normal_(self.GSP_encoder.conv5.weight, a=0, mode="fan_in", nonlinearity="leaky_relu")
+        nn.init.kaiming_normal_(self.GSP_encoder.conv6.weight, a=0, mode="fan_in", nonlinearity="leaky_relu")
+        nn.init.kaiming_normal_(self.GSP_encoder.fc.weight, a=0, mode="fan_in", nonlinearity="leaky_relu")
+
+    @property
+    def dtype(self):
+        # モデルのdtypeを取得するために、いずれかの層のdtypeを返します
+        # 典型的には最初のConv層やLinear層の重みのdtype
+        return self.spatial_encoder.fc1.weight.dtype
+
+    def encode_spatial_features(self, spatial_coords):
+        # spatial_coords: [batch_size, 2]
+        return self.spatial_encoder(spatial_coords.type(self.dtype))
+
+    def encode_GSP_features(self, GSP_data):
+        # GSP_data: [batch_size, 1, 4800]
+        return self.GSP_encoder(GSP_data.type(self.dtype))
+
+    def forward(self, GSP_data, spatial_coords):
+        # print("spatial shape: ", spatial_coords.shape)
+        # print("GSP shape: ", GSP_data.shape)
+        # 空間特徴量と音響特徴量のエンコード
+        spatial_features = self.encode_spatial_features(spatial_coords)
+        GSP_features = self.encode_GSP_features(GSP_data)
+
+        # 特徴量の正規化 (L2ノルムで正規化)
+        spatial_features = spatial_features / spatial_features.norm(dim=1, keepdim=True)
+        GSP_features = GSP_features / GSP_features.norm(dim=1, keepdim=True)
+
+        # コサイン類似度をロジットとして計算
+        # logit_scale は温度パラメータのexp()
+        logit_scale = self.logit_scale.exp()
+        logits_per_spatial = logit_scale * spatial_features @ GSP_features.t()
+        logits_per_GSP = logits_per_spatial.t() # 転置してGSPから空間へのロジットも取得
+
+        # 形状: [batch_size, batch_size]
+        # logits_per_spatial: (spatial_feat_i, GSP_feat_j) の類似度
+        # logits_per_GSP: (GSP_feat_i, spatial_feat_j) の類似度
+        return logits_per_spatial, logits_per_GSP
+
+class GSP_Spatial_CLIP_Positioning(nn.Module):
+    def __init__(self,
+                 embed_dim: int,           # 埋め込み次元 (例: 512)
+                 # Spatial Encoder (MLP)
+                 spatial_coord_dim: int,   # 元の空間座標の次元 (例: 2)
+                 spatial_sinusoidal_dim: int, # Sinusoidal Embeddingの次元 (例: 10)
+                 # SIR Encoder (1D CNN)
+                 GSP_input_length: int,    # 元のSIRの長さ (例: 4800)
+                 ):
+        super().__init__()
+
+        # Spatial Encoder (MLP)
+        self.spatial_encoder = SE_MLP(
+            original_coord_dim=spatial_coord_dim,
+            output_dim=embed_dim
+        )
+
+        # GSP Encoder (1D CNN)
+        self.GSP_encoder = GE_1DCNN(
+            input_length=GSP_input_length,
+            output_dim=embed_dim
+        )
+        
+        # logit_scale は学習可能な温度パラメータ (tauの逆数)
+        # CLIP論文では log(1/0.07) から初期化
+        self.logit_scale = nn.Parameter(torch.ones([]) * np.log(1 / 0.07))
+
+        self.GSP_decoder = GD_MLP(
+            input_dim=embed_dim,
+            output_dim=spatial_coord_dim
+        )
+
+        self.initialize_parameters()
+
+    def initialize_parameters(self):
+        
+        # nn.init.kaiming_normal_(self.spatial_encoder.fc1.weight, a=0, mode="fan_in", nonlinearity="leaky_relu")
+        # nn.init.kaiming_normal_(self.spatial_encoder.fc2.weight, a=0, mode="fan_in", nonlinearity="leaky_relu")
+        # nn.init.kaiming_normal_(self.GSP_encoder.conv1.weight, a=0, mode="fan_in", nonlinearity="leaky_relu")
+        # nn.init.kaiming_normal_(self.GSP_encoder.conv2.weight, a=0, mode="fan_in", nonlinearity="leaky_relu")
+        # nn.init.kaiming_normal_(self.GSP_encoder.conv3.weight, a=0, mode="fan_in", nonlinearity="leaky_relu")
+        # nn.init.kaiming_normal_(self.GSP_encoder.conv4.weight, a=0, mode="fan_in", nonlinearity="leaky_relu")
+        # nn.init.kaiming_normal_(self.GSP_encoder.conv5.weight, a=0, mode="fan_in", nonlinearity="leaky_relu")
+        # nn.init.kaiming_normal_(self.GSP_encoder.conv6.weight, a=0, mode="fan_in", nonlinearity="leaky_relu")
+        # nn.init.kaiming_normal_(self.GSP_encoder.fc.weight, a=0, mode="fan_in", nonlinearity="leaky_relu")
+        nn.init.kaiming_normal_(self.GSP_decoder.fc1.weight, a=0, mode="fan_in", nonlinearity="leaky_relu")
+        nn.init.kaiming_normal_(self.GSP_decoder.fc2.weight, a=0, mode="fan_in", nonlinearity="leaky_relu")
+
+
+    @property
+    def dtype(self):
+        # モデルのdtypeを取得するために、いずれかの層のdtypeを返します
+        # 典型的には最初のConv層やLinear層の重みのdtype
+        return self.spatial_encoder.fc1.weight.dtype
+
+    # def encode_spatial_features(self, spatial_coords):
+    #     # spatial_coords: [batch_size, 2]
+    #     return self.spatial_encoder(spatial_coords.type(self.dtype))
+
+    def encode_GSP_features(self, GSP_data):
+        # GSP_data: [batch_size, 1, 4800]
+        return self.GSP_encoder(GSP_data.type(self.dtype))
+
+    def forward(self, GSP_data):
+        # print("spatial shape: ", spatial_coords.shape)
+        # print("GSP shape: ", GSP_data.shape)
+        # 空間特徴量と音響特徴量のエンコード
+        # spatial_features = self.encode_spatial_features(spatial_coords)
+        GSP_features = self.encode_GSP_features(GSP_data)
+
+        # 特徴量の正規化 (L2ノルムで正規化)
+        # spatial_features = spatial_features / spatial_features.norm(dim=1, keepdim=True)
+        GSP_features = GSP_features / GSP_features.norm(dim=1, keepdim=True)
+
+        estimated_coord = self.GSP_decoder(GSP_features)
+        return estimated_coord
+
 
 class Bottleneck(nn.Module):
     expansion = 4
@@ -238,6 +397,7 @@ class VisionTransformer(nn.Module):
             x = x @ self.proj
 
         return x
+    
 
 
 class CLIP(nn.Module):

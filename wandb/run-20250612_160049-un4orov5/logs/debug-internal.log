@@ -1,0 +1,16 @@
+{"time":"2025-06-12T16:00:52.223142829Z","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/Workspace/Users/stucbk953-mmm@g.ecc.u-tokyo.ac.jp/CLIP/wandb/run-20250612_160049-un4orov5/logs/debug-core.log"}
+{"time":"2025-06-12T16:00:52.79527259Z","level":"INFO","msg":"stream: created new stream","id":"un4orov5"}
+{"time":"2025-06-12T16:00:52.795461648Z","level":"INFO","msg":"stream: started","id":"un4orov5"}
+{"time":"2025-06-12T16:00:52.795551536Z","level":"INFO","msg":"handler: started","stream_id":"un4orov5"}
+{"time":"2025-06-12T16:00:52.795530952Z","level":"INFO","msg":"sender: started","stream_id":"un4orov5"}
+{"time":"2025-06-12T16:00:52.795499121Z","level":"INFO","msg":"writer: Do: started","stream_id":"un4orov5"}
+{"time":"2025-06-12T16:00:53.287355882Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-12T16:03:10.317337476Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-12T16:03:10.317486797Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-12T16:03:11.31907723Z","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.501393768,"progress":"19.3KB/19.3KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.384630537,"progress":"250B/250B"},{"desc":"uploading config.yaml","runtime_seconds":0.095130011,"progress":"656B/656B"}],"total_operations":3}}
+{"time":"2025-06-12T16:03:11.718065007Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-12T16:03:12.056051021Z","level":"INFO","msg":"stream: closing","id":"un4orov5"}
+{"time":"2025-06-12T16:03:12.056150217Z","level":"INFO","msg":"handler: closed","stream_id":"un4orov5"}
+{"time":"2025-06-12T16:03:12.056176237Z","level":"INFO","msg":"sender: closed","stream_id":"un4orov5"}
+{"time":"2025-06-12T16:03:12.056168648Z","level":"INFO","msg":"writer: Close: closed","stream_id":"un4orov5"}
+{"time":"2025-06-12T16:03:12.157260361Z","level":"INFO","msg":"stream: closed","id":"un4orov5"}

@@ -1,0 +1,27 @@
+save directory:  mita/GSP_CLIP/model/lucky-tree-9
+Using device: cuda
+X.shape: (4941, 1, 4800)
+y.shape: (4941, 2)
+Dataset size:  4941
+Starting training...
+Epoch 1 Summary: Train Loss: 3.178734, Val Loss: 3.385912
+Traceback (most recent call last):
+  File "/Workspace/Users/stucbk953-mmm@g.ecc.u-tokyo.ac.jp/CLIP/scripts/train.py", line 189, in <module>
+    train(config_data) # train関数に読み込んだ辞書を渡す
+    ^^^^^^^^^^^^^^^^^^
+  File "/Workspace/Users/stucbk953-mmm@g.ecc.u-tokyo.ac.jp/CLIP/scripts/train.py", line 96, in train
+    trainer.train()
+  File "/Workspace/Users/stucbk953-mmm@g.ecc.u-tokyo.ac.jp/CLIP/base/base_trainer.py", line 100, in train
+    self._save_checkpoint(epoch, save_best=best)
+  File "/Workspace/Users/stucbk953-mmm@g.ecc.u-tokyo.ac.jp/CLIP/base/base_trainer.py", line 124, in _save_checkpoint
+    torch.save(state, best_path)
+  File "/databricks/python/lib/python3.11/site-packages/torch/serialization.py", line 627, in save
+    with _open_zipfile_writer(f) as opened_zipfile:
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.11/site-packages/torch/serialization.py", line 501, in _open_zipfile_writer
+    return container(name_or_buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.11/site-packages/torch/serialization.py", line 472, in __init__
+    super().__init__(torch._C.PyTorchFileWriter(self.name))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Parent directory /dbfs/mnt/mnt_wg3-1/mita/GSP_CLIP/model/lucky-tree-9 does not exist.

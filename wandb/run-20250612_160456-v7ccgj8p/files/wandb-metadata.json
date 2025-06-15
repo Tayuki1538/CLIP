@@ -1,0 +1,39 @@
+{
+  "os": "Linux-6.8.0-1029-aws-x86_64-with-glibc2.35",
+  "python": "CPython 3.11.11",
+  "startedAt": "2025-06-12T16:04:58.495725Z",
+  "program": "/Workspace/Users/stucbk953-mmm@g.ecc.u-tokyo.ac.jp/CLIP/scripts/train.py",
+  "codePath": "scripts/train.py",
+  "email": "stucbk953-mmm@g.ecc.u-tokyo.ac.jp",
+  "root": "/Workspace/Users/stucbk953-mmm@g.ecc.u-tokyo.ac.jp/CLIP",
+  "host": "0802-063227-ykfz500d-10-30-219-139",
+  "executable": "/local_disk0/.ephemeral_nfs/envs/pythonEnv-caad9adf-0fa5-4dec-90ea-e6a1d17765ad/bin/python3",
+  "codePathLocal": "scripts/train.py",
+  "cpu_count": 2,
+  "cpu_count_logical": 4,
+  "gpu": "Tesla T4",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "157396975616",
+      "used": "32035999744"
+    }
+  },
+  "memory": {
+    "total": "11631853568"
+  },
+  "cpu": {
+    "count": 2,
+    "countLogical": 4
+  },
+  "gpu_nvidia": [
+    {
+      "name": "Tesla T4",
+      "memoryTotal": "16106127360",
+      "cudaCores": 2560,
+      "architecture": "Turing",
+      "uuid": "GPU-d1d2692b-0b35-68c4-935e-822100eb4ae6"
+    }
+  ],
+  "cudaVersion": "12.2"
+}

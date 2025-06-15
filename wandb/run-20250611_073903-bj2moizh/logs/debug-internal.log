@@ -1,0 +1,17 @@
+{"time":"2025-06-11T07:39:06.312025353Z","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/Workspace/Users/stucbk953-mmm@g.ecc.u-tokyo.ac.jp/CLIP/wandb/run-20250611_073903-bj2moizh/logs/debug-core.log"}
+{"time":"2025-06-11T07:39:06.901763263Z","level":"INFO","msg":"stream: created new stream","id":"bj2moizh"}
+{"time":"2025-06-11T07:39:06.901969262Z","level":"INFO","msg":"stream: started","id":"bj2moizh"}
+{"time":"2025-06-11T07:39:06.901965489Z","level":"INFO","msg":"handler: started","stream_id":"bj2moizh"}
+{"time":"2025-06-11T07:39:06.902001258Z","level":"INFO","msg":"sender: started","stream_id":"bj2moizh"}
+{"time":"2025-06-11T07:39:06.902019556Z","level":"INFO","msg":"writer: Do: started","stream_id":"bj2moizh"}
+{"time":"2025-06-11T07:39:07.408835877Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-11T07:39:08.535042828Z","level":"ERROR","msg":"file transfer: upload: failed to upload: 400 Bad Request","task":"DefaultUploadTask{FileKind: 1, Path: /Workspace/Users/stucbk953-mmm@g.ecc.u-tokyo.ac.jp/CLIP/wandb/run-20250611_073903-bj2moizh/files/wandb-metadata.json, Name: wandb-metadata.json, Url: https://storage.googleapis.com/wandb-production.appspot.com/yukiyamita/GSP_CLIP/bj2moizh/wandb-metadata.json?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com%2F20250611%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20250611T073907Z&X-Goog-Expires=86399&X-Goog-Signature=0109b83735f62e8830c8faaef2610c9cf83b6ccd96f86957400477e8d6660f459c8a16d1f9ab3dd24d9a965a75cb4ef2119878b41da40dc960d4d96aa80f0ffcbf0c9bb07c44ac24c9a0f50da92312cef99a46a8f8fe0ff8ee3c23c4100b8316bcf27fad8dd18d8fd2993f6a381d882388ed4dc1100b37debb8ea8cfd7b01f75415374aac417ebbf65e9bee60a2bb2514557546108d139dd76d44b55baa671ee7c001adee2d25f872b07df6560d99b3d5af260e515c14c05de3be000df75571f82b6233f9dfd22623384ede5f911602f65feebe9577f951138bf405bf31b63c4083ac1075233931d35a873f8bb0a5d7ba60ae39f27c2133376483afe285fa315&X-Goog-SignedHeaders=host&X-User=stucbk953-mmm, Size: 570}"}
+{"time":"2025-06-11T07:55:15.800584786Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-11T07:55:15.800861852Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-11T07:55:16.803378718Z","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.462383971,"progress":"9.7KB/9.7KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.325858826,"progress":"221B/221B"}],"total_operations":2}}
+{"time":"2025-06-11T07:55:17.539009137Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-11T07:55:17.96354059Z","level":"INFO","msg":"stream: closing","id":"bj2moizh"}
+{"time":"2025-06-11T07:55:17.963679934Z","level":"INFO","msg":"handler: closed","stream_id":"bj2moizh"}
+{"time":"2025-06-11T07:55:17.963715865Z","level":"INFO","msg":"writer: Close: closed","stream_id":"bj2moizh"}
+{"time":"2025-06-11T07:55:17.963765145Z","level":"INFO","msg":"sender: closed","stream_id":"bj2moizh"}
+{"time":"2025-06-11T07:55:18.155428247Z","level":"INFO","msg":"stream: closed","id":"bj2moizh"}

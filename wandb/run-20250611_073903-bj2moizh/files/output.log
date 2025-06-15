@@ -1,0 +1,183 @@
+Using device: cuda
+4941 samples have been processed.
+
+X_train shape: (4941, 4800)
+y_train shape: (4941, 2)
+Dataset size:  4941
+Starting training...
+Epoch 1 Summary: Train Loss: 3.165103, Val Loss: 3.291632
+Saving current best: model_best.pth ...
+Epoch 2 Summary: Train Loss: 2.747272, Val Loss: 2.188855
+Saving current best: model_best.pth ...
+Epoch 3 Summary: Train Loss: 2.447709, Val Loss: 1.948665
+Saving current best: model_best.pth ...
+Epoch 4 Summary: Train Loss: 2.236250, Val Loss: 1.556995
+Saving current best: model_best.pth ...
+Epoch 5 Summary: Train Loss: 2.072803, Val Loss: 1.390719
+Saving current best: model_best.pth ...
+Epoch 6 Summary: Train Loss: 1.953761, Val Loss: 1.335749
+Saving current best: model_best.pth ...
+Epoch 7 Summary: Train Loss: 1.836807, Val Loss: 1.208704
+Saving current best: model_best.pth ...
+Epoch 8 Summary: Train Loss: 1.739732, Val Loss: 1.030944
+Saving current best: model_best.pth ...
+Epoch 9 Summary: Train Loss: 1.655642, Val Loss: 1.238835
+Epoch 10 Summary: Train Loss: 1.581708, Val Loss: 0.974659
+Saving current best: model_best.pth ...
+Epoch 11 Summary: Train Loss: 1.516205, Val Loss: 0.855703
+Saving current best: model_best.pth ...
+Epoch 12 Summary: Train Loss: 1.454614, Val Loss: 0.857643
+Epoch 13 Summary: Train Loss: 1.399255, Val Loss: 0.918069
+Epoch 14 Summary: Train Loss: 1.351812, Val Loss: 0.830047
+Saving current best: model_best.pth ...
+Epoch 15 Summary: Train Loss: 1.307321, Val Loss: 0.765958
+Saving current best: model_best.pth ...
+Epoch 16 Summary: Train Loss: 1.265386, Val Loss: 0.739544
+Saving current best: model_best.pth ...
+Epoch 17 Summary: Train Loss: 1.227806, Val Loss: 0.748631
+Epoch 18 Summary: Train Loss: 1.193628, Val Loss: 0.620500
+Saving current best: model_best.pth ...
+Epoch 19 Summary: Train Loss: 1.157922, Val Loss: 0.586759
+Saving current best: model_best.pth ...
+Epoch 20 Summary: Train Loss: 1.127509, Val Loss: 0.647803
+Epoch 21 Summary: Train Loss: 1.100929, Val Loss: 0.738881
+Epoch 22 Summary: Train Loss: 1.073178, Val Loss: 0.612346
+Epoch 23 Summary: Train Loss: 1.048369, Val Loss: 0.583513
+Saving current best: model_best.pth ...
+Epoch 24 Summary: Train Loss: 1.026179, Val Loss: 0.621562
+Epoch 25 Summary: Train Loss: 1.005368, Val Loss: 0.550041
+Saving current best: model_best.pth ...
+Epoch 26 Summary: Train Loss: 0.985365, Val Loss: 0.550914
+Epoch 27 Summary: Train Loss: 0.966031, Val Loss: 0.664312
+Epoch 28 Summary: Train Loss: 0.947435, Val Loss: 0.594451
+Epoch 29 Summary: Train Loss: 0.928635, Val Loss: 0.532840
+Saving current best: model_best.pth ...
+Epoch 30 Summary: Train Loss: 0.910240, Val Loss: 0.448606
+Saving current best: model_best.pth ...
+Epoch 31 Summary: Train Loss: 0.893649, Val Loss: 0.419982
+Saving current best: model_best.pth ...
+Epoch 32 Summary: Train Loss: 0.878336, Val Loss: 0.711668
+Epoch 33 Summary: Train Loss: 0.865520, Val Loss: 0.466468
+Epoch 34 Summary: Train Loss: 0.852781, Val Loss: 0.457562
+Epoch 35 Summary: Train Loss: 0.838923, Val Loss: 0.405503
+Saving current best: model_best.pth ...
+Epoch 36 Summary: Train Loss: 0.825881, Val Loss: 0.463749
+Epoch 37 Summary: Train Loss: 0.812821, Val Loss: 0.393366
+Saving current best: model_best.pth ...
+Epoch 38 Summary: Train Loss: 0.801391, Val Loss: 0.593674
+Epoch 39 Summary: Train Loss: 0.789704, Val Loss: 0.410687
+Epoch 40 Summary: Train Loss: 0.779294, Val Loss: 0.402425
+Epoch 41 Summary: Train Loss: 0.769241, Val Loss: 0.420087
+Epoch 42 Summary: Train Loss: 0.759403, Val Loss: 0.398667
+Epoch 43 Summary: Train Loss: 0.748747, Val Loss: 0.360424
+Saving current best: model_best.pth ...
+Epoch 44 Summary: Train Loss: 0.740812, Val Loss: 0.491902
+Epoch 45 Summary: Train Loss: 0.733687, Val Loss: 0.383531
+Epoch 46 Summary: Train Loss: 0.725323, Val Loss: 0.440174
+Epoch 47 Summary: Train Loss: 0.717168, Val Loss: 0.453115
+Epoch 48 Summary: Train Loss: 0.708258, Val Loss: 0.432881
+Epoch 49 Summary: Train Loss: 0.700118, Val Loss: 0.342768
+Saving current best: model_best.pth ...
+Epoch 50 Summary: Train Loss: 0.692412, Val Loss: 0.471226
+Epoch 51 Summary: Train Loss: 0.684657, Val Loss: 0.363798
+Epoch 52 Summary: Train Loss: 0.676911, Val Loss: 0.401319
+Epoch 53 Summary: Train Loss: 0.670457, Val Loss: 0.398207
+Epoch 54 Summary: Train Loss: 0.664379, Val Loss: 0.428728
+Epoch 55 Summary: Train Loss: 0.657368, Val Loss: 0.292050
+Saving current best: model_best.pth ...
+Epoch 56 Summary: Train Loss: 0.650287, Val Loss: 0.565848
+Epoch 57 Summary: Train Loss: 0.644331, Val Loss: 0.377996
+Epoch 58 Summary: Train Loss: 0.637890, Val Loss: 0.328721
+Epoch 59 Summary: Train Loss: 0.631483, Val Loss: 0.341591
+Epoch 60 Summary: Train Loss: 0.625487, Val Loss: 0.434476
+Epoch 61 Summary: Train Loss: 0.619717, Val Loss: 0.327087
+Epoch 62 Summary: Train Loss: 0.614071, Val Loss: 0.322381
+Epoch 63 Summary: Train Loss: 0.608657, Val Loss: 0.590590
+Epoch 64 Summary: Train Loss: 0.604167, Val Loss: 0.722129
+Epoch 65 Summary: Train Loss: 0.599024, Val Loss: 0.266171
+Saving current best: model_best.pth ...
+Epoch 66 Summary: Train Loss: 0.594142, Val Loss: 0.309642
+Epoch 67 Summary: Train Loss: 0.590594, Val Loss: 0.349034
+Epoch 68 Summary: Train Loss: 0.585939, Val Loss: 0.363122
+Epoch 69 Summary: Train Loss: 0.582704, Val Loss: 0.271496
+Epoch 70 Summary: Train Loss: 0.577974, Val Loss: 0.266535
+Epoch 71 Summary: Train Loss: 0.573045, Val Loss: 0.319359
+Epoch 72 Summary: Train Loss: 0.568912, Val Loss: 0.412346
+Epoch 73 Summary: Train Loss: 0.564985, Val Loss: 0.321900
+Epoch 74 Summary: Train Loss: 0.560466, Val Loss: 0.343148
+Epoch 75 Summary: Train Loss: 0.556274, Val Loss: 0.348556
+Epoch 76 Summary: Train Loss: 0.552561, Val Loss: 0.351808
+Epoch 77 Summary: Train Loss: 0.548968, Val Loss: 0.262288
+Saving current best: model_best.pth ...
+Epoch 78 Summary: Train Loss: 0.544514, Val Loss: 0.376659
+Epoch 79 Summary: Train Loss: 0.540413, Val Loss: 0.302368
+Epoch 80 Summary: Train Loss: 0.536685, Val Loss: 0.385727
+Epoch 81 Summary: Train Loss: 0.532918, Val Loss: 0.347427
+Epoch 82 Summary: Train Loss: 0.529128, Val Loss: 0.393605
+Epoch 83 Summary: Train Loss: 0.526334, Val Loss: 0.361873
+Epoch 84 Summary: Train Loss: 0.523342, Val Loss: 0.239610
+Saving current best: model_best.pth ...
+Epoch 85 Summary: Train Loss: 0.519997, Val Loss: 0.321897
+Epoch 86 Summary: Train Loss: 0.516867, Val Loss: 0.284981
+Epoch 87 Summary: Train Loss: 0.513919, Val Loss: 0.434220
+Epoch 88 Summary: Train Loss: 0.510872, Val Loss: 0.454904
+Epoch 89 Summary: Train Loss: 0.507433, Val Loss: 0.235819
+Saving current best: model_best.pth ...
+Epoch 90 Summary: Train Loss: 0.504163, Val Loss: 0.258421
+Epoch 91 Summary: Train Loss: 0.501356, Val Loss: 0.371954
+Epoch 92 Summary: Train Loss: 0.498589, Val Loss: 0.247734
+Epoch 93 Summary: Train Loss: 0.495495, Val Loss: 0.288318
+Epoch 94 Summary: Train Loss: 0.492901, Val Loss: 0.431943
+Epoch 95 Summary: Train Loss: 0.490883, Val Loss: 0.298862
+Epoch 96 Summary: Train Loss: 0.488088, Val Loss: 0.240806
+Epoch 97 Summary: Train Loss: 0.485080, Val Loss: 0.214429
+Saving current best: model_best.pth ...
+Epoch 98 Summary: Train Loss: 0.481950, Val Loss: 0.297987
+Epoch 99 Summary: Train Loss: 0.479557, Val Loss: 0.232804
+Epoch 100 Summary: Train Loss: 0.477646, Val Loss: 0.256580
+Epoch 101 Summary: Train Loss: 0.474874, Val Loss: 0.216335
+Epoch 102 Summary: Train Loss: 0.471949, Val Loss: 0.219980
+Epoch 103 Summary: Train Loss: 0.469728, Val Loss: 0.267725
+Epoch 104 Summary: Train Loss: 0.467483, Val Loss: 0.257257
+Epoch 105 Summary: Train Loss: 0.464897, Val Loss: 0.231765
+Epoch 106 Summary: Train Loss: 0.462282, Val Loss: 0.284071
+Epoch 107 Summary: Train Loss: 0.459771, Val Loss: 0.316563
+Epoch 108 Summary: Train Loss: 0.457210, Val Loss: 0.230727
+Epoch 109 Summary: Train Loss: 0.454923, Val Loss: 0.506505
+Epoch 110 Summary: Train Loss: 0.452883, Val Loss: 0.414200
+Epoch 111 Summary: Train Loss: 0.450516, Val Loss: 0.268913
+Epoch 112 Summary: Train Loss: 0.448022, Val Loss: 0.222756
+Epoch 113 Summary: Train Loss: 0.445887, Val Loss: 0.293824
+Epoch 114 Summary: Train Loss: 0.443607, Val Loss: 0.262684
+Epoch 115 Summary: Train Loss: 0.441584, Val Loss: 0.307419
+Epoch 116 Summary: Train Loss: 0.439751, Val Loss: 0.256129
+Epoch 117 Summary: Train Loss: 0.437477, Val Loss: 0.394548
+Epoch 118 Summary: Train Loss: 0.435378, Val Loss: 0.196228
+Saving current best: model_best.pth ...
+Epoch 119 Summary: Train Loss: 0.433091, Val Loss: 0.240822
+Epoch 120 Summary: Train Loss: 0.431431, Val Loss: 0.200459
+Epoch 121 Summary: Train Loss: 0.430168, Val Loss: 0.691391
+Epoch 122 Summary: Train Loss: 0.428762, Val Loss: 0.163618
+Saving current best: model_best.pth ...
+Epoch 123 Summary: Train Loss: 0.426622, Val Loss: 0.208352
+Epoch 124 Summary: Train Loss: 0.424326, Val Loss: 0.211641
+Epoch 125 Summary: Train Loss: 0.422261, Val Loss: 0.266930
+Epoch 126 Summary: Train Loss: 0.420633, Val Loss: 0.892742
+Epoch 127 Summary: Train Loss: 0.419271, Val Loss: 0.243328
+Epoch 128 Summary: Train Loss: 0.417168, Val Loss: 0.180645
+Epoch 129 Summary: Train Loss: 0.415206, Val Loss: 0.225215
+Epoch 130 Summary: Train Loss: 0.413155, Val Loss: 0.218277
+Epoch 131 Summary: Train Loss: 0.411527, Val Loss: 0.204842
+Epoch 132 Summary: Train Loss: 0.410076, Val Loss: 0.221913
+Epoch 133 Summary: Train Loss: 0.408330, Val Loss: 0.229489
+Epoch 134 Summary: Train Loss: 0.406452, Val Loss: 0.235647
+Epoch 135 Summary: Train Loss: 0.404725, Val Loss: 0.248908
+Epoch 136 Summary: Train Loss: 0.403148, Val Loss: 0.251754
+Epoch 137 Summary: Train Loss: 0.401387, Val Loss: 0.244305
+Epoch 138 Summary: Train Loss: 0.399489, Val Loss: 0.190264
+Epoch 139 Summary: Train Loss: 0.398169, Val Loss: 0.223337
+Epoch 140 Summary: Train Loss: 0.396431, Val Loss: 0.230382
+Epoch 141 Summary: Train Loss: 0.394828, Val Loss: 0.217846
+Epoch 142 Summary: Train Loss: 0.393330, Val Loss: 0.341273
+Epoch 143 Summary: Train Loss: 0.392155, Val Loss: 0.288649
+Training complete!

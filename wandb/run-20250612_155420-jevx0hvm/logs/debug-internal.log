@@ -1,0 +1,16 @@
+{"time":"2025-06-12T15:54:23.520185268Z","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/Workspace/Users/stucbk953-mmm@g.ecc.u-tokyo.ac.jp/CLIP/wandb/run-20250612_155420-jevx0hvm/logs/debug-core.log"}
+{"time":"2025-06-12T15:54:24.102060831Z","level":"INFO","msg":"stream: created new stream","id":"jevx0hvm"}
+{"time":"2025-06-12T15:54:24.102280416Z","level":"INFO","msg":"stream: started","id":"jevx0hvm"}
+{"time":"2025-06-12T15:54:24.102289704Z","level":"INFO","msg":"handler: started","stream_id":"jevx0hvm"}
+{"time":"2025-06-12T15:54:24.10231243Z","level":"INFO","msg":"sender: started","stream_id":"jevx0hvm"}
+{"time":"2025-06-12T15:54:24.102333124Z","level":"INFO","msg":"writer: Do: started","stream_id":"jevx0hvm"}
+{"time":"2025-06-12T15:54:24.561219765Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-12T15:55:54.460145109Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-12T15:55:54.4602856Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-12T15:55:55.461825167Z","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading config.yaml","runtime_seconds":0.180904833,"progress":"656B/656B"}],"total_operations":1}}
+{"time":"2025-06-12T15:55:55.579493518Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-12T15:55:55.876539519Z","level":"INFO","msg":"stream: closing","id":"jevx0hvm"}
+{"time":"2025-06-12T15:55:55.876655614Z","level":"INFO","msg":"handler: closed","stream_id":"jevx0hvm"}
+{"time":"2025-06-12T15:55:55.876689961Z","level":"INFO","msg":"sender: closed","stream_id":"jevx0hvm"}
+{"time":"2025-06-12T15:55:55.876677992Z","level":"INFO","msg":"writer: Close: closed","stream_id":"jevx0hvm"}
+{"time":"2025-06-12T15:55:56.009005721Z","level":"INFO","msg":"stream: closed","id":"jevx0hvm"}

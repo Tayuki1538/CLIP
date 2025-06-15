@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Workspace/Users/stucbk953-mmm@g.ecc.u-tokyo.ac.jp/CLIP/scripts/train.py", line 175, in <module>
+    config_data["trainer"]["savedir"] += "/{}".format(wandb.run.name)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'savedir'

@@ -1,0 +1,1 @@
+{"_timestamp":1.7498068179858627e+09,"_runtime":182.966782511,"_wandb":{"runtime":182},"_step":368,"loss":0.13858656502137837,"root_mean_squared_error":0.24755865335464478,"val_loss":0.0324377603828907,"val_root_mean_squared_error":0.18010486662387848}

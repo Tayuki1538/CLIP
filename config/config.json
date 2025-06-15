@@ -1,0 +1,24 @@
+{
+  "name": "GSP_CLIP_Positioning",
+  "embed_dim": 512,
+  "spatial_coord_dim": 2,
+  "spatial_sinusoidal_dim": 2,
+  "GSP_input_length": 4800,
+  "batch_size": 60,
+  "num_epochs": 200,
+  "learning_rate": 1e-3,
+  "wandb": false,
+  "resume": "/dbfs/mnt/mnt_wg3-1/mita/GSP_CLIP_Positioning/model/usual-frog-8/model_best.pth",
+  "trainer": {
+      "epochs": 1000,
+
+      "save_dir": null,
+      "log_dir": null,
+      "save_period": 1,
+      "verbosity": 2,
+      "monitor": "min val_loss",
+      "early_stop": 20,
+
+      "tensorboard": true
+  }
+}

@@ -1,0 +1,12 @@
+2025-06-11 05:20:33,964 INFO    MainThread:16202 [wandb_setup.py:_flush():81] Current SDK version is 0.20.1
+2025-06-11 05:20:33,964 INFO    MainThread:16202 [wandb_setup.py:_flush():81] Configure stats pid to 16202
+2025-06-11 05:20:33,964 INFO    MainThread:16202 [wandb_setup.py:_flush():81] Loading settings from /root/.config/wandb/settings
+2025-06-11 05:20:33,964 INFO    MainThread:16202 [wandb_setup.py:_flush():81] Loading settings from /Workspace/Users/stucbk953-mmm@g.ecc.u-tokyo.ac.jp/CLIP/wandb/settings
+2025-06-11 05:20:33,965 INFO    MainThread:16202 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2025-06-11 05:20:33,966 INFO    MainThread:16202 [wandb_init.py:setup_run_log_directory():703] Logging user logs to /Workspace/Users/stucbk953-mmm@g.ecc.u-tokyo.ac.jp/CLIP/wandb/run-20250611_052031-q3ll7n0b/logs/debug.log
+2025-06-11 05:20:33,967 INFO    MainThread:16202 [wandb_init.py:setup_run_log_directory():704] Logging internal logs to /Workspace/Users/stucbk953-mmm@g.ecc.u-tokyo.ac.jp/CLIP/wandb/run-20250611_052031-q3ll7n0b/logs/debug-internal.log
+2025-06-11 05:20:33,967 INFO    MainThread:16202 [wandb_init.py:init():831] calling init triggers
+2025-06-11 05:20:33,967 INFO    MainThread:16202 [wandb_init.py:init():836] wandb.init called with sweep_config: {}
+config: {'embed_dim': 512, 'spatial_coord_dim': 2, 'spatial_sinusoidal_dim': 2, 'GSP_input_length': 4800, 'batch_size': 60, 'learning_rate': 0.001, '_wandb': {}}
+2025-06-11 05:20:33,967 INFO    MainThread:16202 [wandb_init.py:init():872] starting backend
+2025-06-11 05:20:34,276 INFO    MainThread:16202 [wandb_init.py:init():875] sending inform_init request

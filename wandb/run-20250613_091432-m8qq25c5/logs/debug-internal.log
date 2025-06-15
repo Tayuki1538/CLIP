@@ -1,0 +1,17 @@
+{"time":"2025-06-13T09:14:34.531824078Z","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/Workspace/Users/stucbk953-mmm@g.ecc.u-tokyo.ac.jp/CLIP/wandb/run-20250613_091432-m8qq25c5/logs/debug-core.log"}
+{"time":"2025-06-13T09:14:35.228731192Z","level":"INFO","msg":"stream: created new stream","id":"m8qq25c5"}
+{"time":"2025-06-13T09:14:35.228898522Z","level":"INFO","msg":"stream: started","id":"m8qq25c5"}
+{"time":"2025-06-13T09:14:35.22891626Z","level":"INFO","msg":"handler: started","stream_id":"m8qq25c5"}
+{"time":"2025-06-13T09:14:35.228903249Z","level":"INFO","msg":"writer: Do: started","stream_id":"m8qq25c5"}
+{"time":"2025-06-13T09:14:35.22892668Z","level":"INFO","msg":"sender: started","stream_id":"m8qq25c5"}
+{"time":"2025-06-13T09:14:35.608478127Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-13T09:14:35.967286858Z","level":"ERROR","msg":"file transfer: upload: failed to upload: 400 Bad Request","task":"DefaultUploadTask{FileKind: 1, Path: /Workspace/Users/stucbk953-mmm@g.ecc.u-tokyo.ac.jp/CLIP/wandb/run-20250613_091432-m8qq25c5/files/wandb-metadata.json, Name: wandb-metadata.json, Url: https://storage.googleapis.com/wandb-production.appspot.com/yukiyamita/GSP_CLIP/m8qq25c5/wandb-metadata.json?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com%2F20250613%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20250613T091435Z&X-Goog-Expires=86399&X-Goog-Signature=8288fc6aeaad35703752737f29d4c9d835bf5787fe30a35c24279d50b45c6f1a3a9ee8fdb6f215f483a58d9a7f9e39a746fa97f912702c8179010ed77163931236ddda3556aab7683a629d536a1ce2463b4c268da8d3f7386d56fde12aeb2d63391645df5a21259411f69e3918da3a9e04f4f33e8694bcdb29bdef77eb31b18e5344316b81a24d401818edf065d0e35f11fa8bddaf4d9149f6fff197664993a92f286ff3a3e87d003b47e787ebb1e3d06b5f479ef6d4d596e05e4efeaafc3e3a5c76d90329a18c5d6b9d81de3bbab9855dcf142bf13fab9acaaeb4c409b797805f4c8a43a4bacaedd74dc427d24dd0a5fc5b5746a9dd7ef70d3615f82e5885da&X-Goog-SignedHeaders=host&X-User=stucbk953-mmm, Size: 571}"}
+{"time":"2025-06-13T09:17:51.989653436Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-13T09:17:51.990113559Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-13T09:17:52.990434672Z","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading config.yaml","runtime_seconds":0.140134169,"progress":"635B/635B"}],"total_operations":1}}
+{"time":"2025-06-13T09:17:53.159584003Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-13T09:17:53.501543441Z","level":"INFO","msg":"stream: closing","id":"m8qq25c5"}
+{"time":"2025-06-13T09:17:53.501639684Z","level":"INFO","msg":"handler: closed","stream_id":"m8qq25c5"}
+{"time":"2025-06-13T09:17:53.501656976Z","level":"INFO","msg":"writer: Close: closed","stream_id":"m8qq25c5"}
+{"time":"2025-06-13T09:17:53.501716517Z","level":"INFO","msg":"sender: closed","stream_id":"m8qq25c5"}
+{"time":"2025-06-13T09:17:53.593765969Z","level":"INFO","msg":"stream: closed","id":"m8qq25c5"}

@@ -1,0 +1,34 @@
+Using device: cuda
+No model loaded.
+X.shape: (4941, 1, 4800)
+y.shape: (4941, 2)
+Traceback (most recent call last):
+  File "/Workspace/Users/stucbk953-mmm@g.ecc.u-tokyo.ac.jp/CLIP/scripts/train.py", line 145, in <module>
+    train(config_data) # train関数に読み込んだ辞書を渡す
+    ^^^^^^^^^^^^^^^^^^
+  File "/Workspace/Users/stucbk953-mmm@g.ecc.u-tokyo.ac.jp/CLIP/scripts/train.py", line 89, in train
+    data_loader = GSPDataLoader(
+                  ^^^^^^^^^^^^^^
+  File "/Workspace/Users/stucbk953-mmm@g.ecc.u-tokyo.ac.jp/CLIP/data_loader/data_loaders.py", line 70, in __init__
+    self.dataset = GSPDataset(pre_training, is_train)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Workspace/Users/stucbk953-mmm@g.ecc.u-tokyo.ac.jp/CLIP/data_loader/data_loaders.py", line 26, in __init__
+    self.load()
+  File "/Workspace/Users/stucbk953-mmm@g.ecc.u-tokyo.ac.jp/CLIP/data_loader/data_loaders.py", line 54, in load
+    data_tensor = torch.tensor(X[i].astype("float32"))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+Exception ignored in atexit callback: <function _start_and_connect_service.<locals>.teardown_atexit at 0x7b9e62e2a3e0>
+Traceback (most recent call last):
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-39ea1aec-0102-47e3-9d8b-55dd09145d9e/lib/python3.11/site-packages/wandb/sdk/lib/service_connection.py", line 90, in teardown_atexit
+    conn.teardown(hooks.exit_code)
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-39ea1aec-0102-47e3-9d8b-55dd09145d9e/lib/python3.11/site-packages/wandb/sdk/lib/service_connection.py", line 218, in teardown
+    self._router.join()
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-39ea1aec-0102-47e3-9d8b-55dd09145d9e/lib/python3.11/site-packages/wandb/sdk/interface/router.py", line 75, in join
+    self._thread.join()
+  File "/usr/lib/python3.11/threading.py", line 1119, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.11/threading.py", line 1139, in _wait_for_tstate_lock
+    if lock.acquire(block, timeout):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt:
